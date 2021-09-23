@@ -1,0 +1,36 @@
+div {
+  text-align: center;
+  margin: 20px;
+  background: #9bf4d5;
+}
+.btn-lg {
+  background: #346357;
+  border: 1px solid black;
+  padding: 2px 3px 2px 3px;
+}
+.btn-lg:hover {
+  background: white;
+  color: #346357;
+  border: 1px solid black;
+}
+.btn-sm {
+  background: #788d88;
+  border: 1px solid black;
+}
+.btn-sm:hover {
+  background: white;
+  color: #000000;
+  border: 1px solid black;
+}
+.fa-sun {
+  color: yellow;
+}
+.fa-cloud-sun {
+  color: whitesmoke;
+}
+.fa-cloud {
+  color: gray;
+}
+.fa-cloud-showers-heavy {
+  color: blue;
+}
