@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body class="backgroundTarget">
   <div class="container">
@@ -26,7 +27,7 @@
             </form>
             <div class="row">
               <div class="col-6">
-                <h1 id="city">Canberra</h1>
+                <h1 id="city"></h1>
                 <p id="current-day-time">Sunday 17:07</p>
               </div>
               <div class="col-6">
@@ -34,18 +35,17 @@
                   <img src="https://ssl.gstatic.com/onebox/weather/64/rain.png" 
                   alt="cloudy" 
                   />
-                    <strong>20</strong><small>ºC |ºF</small>
+                    <strong id="temperature"></strong><small>ºC |ºF</small>
                   </div>
                 </div>
             </div>
             <div class="row">
-              <div class="col-6"><strong>High: </strong>21º</div>
-              <div class="col-6"><strong>Low: </strong>17º</div>
+              <div class="col-6"><strong>High: </strong><span id="highTemp"></span>º</div>
+              <div class="col-6"><strong>Low: </strong><span id="lowTemp"></span>º</div>
             </div>
             <div class="row">
-              <div class="col-4"><strong>Precipitation: </strong>50%</div>
-              <div class="col-4"><strong>Wind: </strong>3km/h</div>
-              <div class="col-4"><strong>Humidity: </strong>60%</div>
+              <div class="col-6"><strong>Wind: </strong><span id="wind"></span>km/h</div>
+              <div class="col-6"><strong>Humidity: </strong><span id="humidity"></span>%</div>
             </div>
             </div>
             
@@ -54,6 +54,6 @@
        
     </div>
 </div>
-  
+  <script src="src/index.js"></script>
 </body>
 </html>

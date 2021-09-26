@@ -1,5 +1,7 @@
 .backgroundTarget {background:#cec9f7;}
-#searchButton {background: #6687a3;
+
+#searchButton {font-family:'Lato', sans-serif ;
+  background: #6687a3;
 color:whitesmoke;
 border: black 1px solid;
 border-radius: 5px;}
@@ -7,7 +9,8 @@ border-radius: 5px;}
 #searchButton:hover {background: whitesmoke;
 color:#6687a3;}
 
-#searchLocation {background: #999999;
+#searchLocation {font-family:'Lato', sans-serif ;
+  background: #999999;
   color: whitesmoke;
 border: black 1px solid;
 border-radius: 5px;}
@@ -19,13 +22,15 @@ h1 {font-family: 'Luckiest Guy', cursive;
 margin-bottom: 0px;
 color: #333333;}
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-li {list-style: none;
-  font-family: 'Lato', sans-serif;
-  color: #333333;}
+div.cityDescription {margin-top: 0;
+padding-top: 0;}
+
+ul {position:relative;
+  list-style: none;
+margin: -10px;
+padding: 0px;}
+
+li {display: block;}
 
 div {text-align: center;
   font-family: 'Lato', sans-serif;
