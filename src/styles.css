@@ -1,36 +1,55 @@
-div {
-  text-align: center;
-  margin: 20px;
-  background: #9bf4d5;
-}
-.btn-lg {
-  background: #346357;
-  border: 1px solid black;
-  padding: 2px 3px 2px 3px;
-}
-.btn-lg:hover {
-  background: white;
-  color: #346357;
-  border: 1px solid black;
-}
-.btn-sm {
-  background: #788d88;
-  border: 1px solid black;
-}
-.btn-sm:hover {
-  background: white;
-  color: #000000;
-  border: 1px solid black;
-}
-.fa-sun {
-  color: yellow;
-}
-.fa-cloud-sun {
+.backgroundTarget {background:#cec9f7;}
+#searchButton {background: #6687a3;
+color:whitesmoke;
+border: black 1px solid;
+border-radius: 5px;}
+
+#searchButton:hover {background: whitesmoke;
+color:#6687a3;}
+
+#searchLocation {background: #999999;
   color: whitesmoke;
+border: black 1px solid;
+border-radius: 5px;}
+
+#searchLocation:hover {background: whitesmoke;
+color: #999999;}
+
+h1 {font-family: 'Luckiest Guy', cursive;
+margin-bottom: 0px;
+color: #333333;}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
-.fa-cloud {
-  color: gray;
-}
-.fa-cloud-showers-heavy {
-  color: blue;
-}
+li {list-style: none;
+  font-family: 'Lato', sans-serif;
+  color: #333333;}
+
+div {text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #333333;}
+.row {margin-bottom: 5px;}
+
+.weather-app-wrapper {max-width: 700px;
+  margin: 30px auto;}
+
+.weather-app {
+  padding:20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color:#D4ECDD;}
+
+  .weather-temperature img {margin-right: 10px;
+  height: 64px;
+width: 64px;
+margin-bottom: 20px;}
+
+.weather-temperature strong {color: #333333;
+font-size: 54px;}
+
+.weather-temperature small {position: relative;
+top: -32px;}
+
+

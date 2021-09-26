@@ -1,111 +1,59 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Weather</title>
-    <meta charset="UTF-8" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://kit.fontawesome.com/44f5e926e0.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="src/styles.css" />
-  </head>
-
-  <body>
-    <div class="border p-1 rounded shadow">
-      <div class="form-center">
-        <form id="find-city">
-          <input type="search" placeholder="Enter city" id="find-city-value" />
-          <button type="button" class="btn btn-primary btn-lg" id="search-city">
-            Search</button
-          ><span></span>
-          <button
-            type="button"
-            class="btn btn-secondary btn-sm"
-            id="current-location-button"
-          >
-            Current location
-          </button>
-        </form>
-      </div>
-
-      <h1 id="city">
-        Canberra
-      </h1>
-      <p id="current-day-time">Thursday 12:54</p>
-
-      <h2 id="temperature">
-        20º
-      </h2>
-
-      <div id="units">
-        <a id="celsius" href="#">°C</a> <span id="divider">|</span>
-        <a id="fahrenheit" href="#"> °F </a>
-      </div>
-
-      <div class="stats">
-        <div class="row justify-content-center">
-          <div class="col-2"><strong>High:</strong> 28</div>
-          <div class="col-2"><strong>Low:</strong> 19</div>
-          <div class="col-2"><strong>Precipitation:</strong> 1%</div>
-          <div class="col-2"><strong>Wind:</strong> 10 km/h</div>
-          <div class="col-2"><strong>Humidity:</strong> 47%</div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="src/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+<body class="backgroundTarget">
+  <div class="container">
+    <div class="weather-app-wrapper">
+        <div class="weather-app">
+            <form id="search-form" class="mb-3">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="search" placeholder="Type a city..." class="form-control"/>
+                    </div>
+                    <div class="col-3"><input type="submit" value="Search" class="btn btn-primary w-100" id="searchButton"/></div>
+                    <div class="col-3"><input type="submit" value="Current Location" class="btn btn-secondary" id="searchLocation"/></div>
+                </div>
+            </form>
+            <div class="row">
+              <div class="col-6">
+                <h1 id="city">Canberra</h1>
+                <p id="current-day-time">Sunday 17:07</p>
+              </div>
+              <div class="col-6">
+                <div class="weather-temperature">
+                  <img src="https://ssl.gstatic.com/onebox/weather/64/rain.png" 
+                  alt="cloudy" 
+                  />
+                    <strong>20</strong><small>ºC |ºF</small>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-6"><strong>High: </strong>21º</div>
+              <div class="col-6"><strong>Low: </strong>17º</div>
+            </div>
+            <div class="row">
+              <div class="col-4"><strong>Precipitation: </strong>50%</div>
+              <div class="col-4"><strong>Wind: </strong>3km/h</div>
+              <div class="col-4"><strong>Humidity: </strong>60%</div>
+            </div>
+            </div>
+            
         </div>
-      </div>
-
-      <div class="week">
-        <div class="row justify-content-center">
-          <div class="col-1">
-            Sun <br />
-            28 <br />
-            <i class="fas fa-sun"></i>
-          </div>
-          <div class="col-1">
-            Mon <br />
-            27 <br />
-            <i class="fas fa-cloud-sun"></i>
-          </div>
-          <div class="col-1">
-            Tues <br />
-            26 <br />
-            <i class="fas fa-cloud"></i>
-          </div>
-          <div class="col-1">
-            Wed <br />
-            25 <br />
-            <i class="fas fa-cloud-showers-heavy"></i>
-          </div>
-          <div class="col-1">
-            Thurs <br />
-            26 <br />
-            <i class="fas fa-cloud"></i>
-          </div>
-          <div class="col-1">
-            Fri <br />
-            27 <br />
-            <i class="fas fa-cloud-sun"></i>
-          </div>
-          <div class="col-1">
-            Sat <br />
-            29 <br />
-            <i class="fas fa-sun"></i>
-          </div>
-        </div>
-      </div>
-      <a href="https://github.com/powerfuldigital/weather-app" target="_blank">Open-source code</a><span> by Powerful Digital</span>
+        <small> <a href="#">Open-source code</a> by Powerful Digital</small>
+       
     </div>
-    <script src="src/index.js"></script>
-  </body>
+</div>
+  
+</body>
 </html>
