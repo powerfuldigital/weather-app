@@ -19,8 +19,9 @@ let windElement= document.querySelector ("#wind");
 let humidityElement = document.querySelector ("#humidity");
 let dateElement= document.querySelector ("#current-day-time");
 let iconElement= document.querySelector ("#icon");
+celsiusTemperature= response.data.main.temp;
 cityElement.innerHTML=(response.data.name);
-temperatureELement.innerHTML= Math.round(response.data.main.temp);
+temperatureELement.innerHTML= Math.round(celsiusTemperature);
 highElement.innerHTML= Math.round(response.data.main.temp_max);
 lowElement.innerHTML= Math.round(response.data.main.temp_min);
 windElement.innerHTML= Math.round(response.data.wind.speed);
@@ -39,10 +40,33 @@ let cityInputElement= document.querySelector("#city-input");
 search (cityInputElement.value);
 }
 
+function showFahrenheitTemperature (event){event.preventDefault();
+let temperatureELement= document.querySelector ("#temperature");
+celsiusLink.classList.remove("active");
+fahrenheitLink.classList.add("active");
+let fahrenheitTemperature= (celsiusTemperature*9)/5+32;
+temperatureELement.innerHTML= Math.round(fahrenheitTemperature);}
+
+function showCelsiusTemperature (event)
+{event.preventDefault();
+celsiusLink.classList.add("active");
+fahrenheitLink.classList.remove("active");
+let temperatureElement= document.querySelector ("#temperature");
+temperatureElement.innerHTML= Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature= null;
 
 let formElement= document.querySelector ("#search-form");
 formElement.addEventListener ("submit", handleSubmit);
 
+let fahrenheitLink= document.querySelector ("#fahrenheit-link");
+fahrenheitLink.addEventListener ("click", showFahrenheitTemperature);
+
+let celsiusLink= document.querySelector ("#celsius-link");
+celsiusLink.addEventListener ("click", showCelsiusTemperature);
+
+search("Canberra");
 
 
 
