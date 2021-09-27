@@ -22,8 +22,6 @@ h1 {font-family: 'Luckiest Guy', cursive;
 margin-bottom: 0px;
 color: #333333;}
 
-div.cityDescription {margin-top: 0;
-padding-top: 0;}
 
 ul {position:relative;
   list-style: none;
@@ -35,6 +33,7 @@ li {display: block;}
 div {text-align: center;
   font-family: 'Lato', sans-serif;
   color: #333333;}
+
 .row {margin-bottom: 5px;}
 
 .weather-app-wrapper {max-width: 700px;
@@ -61,4 +60,5 @@ top: -32px;}
 cursor: default;
 text-decoration: none;}
 
+#description {text-transform: capitalize;}
 

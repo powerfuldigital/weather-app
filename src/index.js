@@ -19,6 +19,7 @@ let windElement= document.querySelector ("#wind");
 let humidityElement = document.querySelector ("#humidity");
 let dateElement= document.querySelector ("#current-day-time");
 let iconElement= document.querySelector ("#icon");
+let descriptionElement= document.querySelector ("#description");
 celsiusTemperature= response.data.main.temp;
 cityElement.innerHTML=(response.data.name);
 temperatureELement.innerHTML= Math.round(celsiusTemperature);
@@ -29,6 +30,7 @@ humidityElement.innerHTML=(response.data.main.humidity);
 dateElement.innerHTML= formatDate (response.data.dt * 1000);
 iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 iconElement.setAttribute("alt", response.data.weather[0].description);
+descriptionElement.innerHTML= response.data.weather[0].description;
 }
 
 function search (city) {let apiKey ="b9ba0314a93083136d968577c718e31d";
@@ -66,7 +68,10 @@ fahrenheitLink.addEventListener ("click", showFahrenheitTemperature);
 let celsiusLink= document.querySelector ("#celsius-link");
 celsiusLink.addEventListener ("click", showCelsiusTemperature);
 
+
 search("Canberra");
+
+
 
 
 
