@@ -30,11 +30,18 @@ iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data
 iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let apiKey ="b9ba0314a93083136d968577c718e31d";
-let city = "Sydney";
+function search (city) {let apiKey ="b9ba0314a93083136d968577c718e31d";
 let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(displayTemperature);}
 
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit (event){event.preventDefault();
+let cityInputElement= document.querySelector("#city-input");
+search (cityInputElement.value);
+}
+
+
+let formElement= document.querySelector ("#search-form");
+formElement.addEventListener ("submit", handleSubmit);
 
 
 
