@@ -45,10 +45,11 @@ div {text-align: center;
   border-radius: 5px;
   background-color:#D4ECDD;}
 
+
   .weather-temperature img {margin-right: 10px;
   height: 64px;
 width: 64px;
-margin-bottom: 20px;}
+margin-bottom: 10px;}
 
 .weather-temperature strong {color: #333333;
 font-size: 54px;}
@@ -60,5 +61,6 @@ top: -32px;}
 cursor: default;
 text-decoration: none;}
 
-#description {text-transform: capitalize;}
+#description {margin-top: 0px;
+  text-transform: capitalize;}
 
