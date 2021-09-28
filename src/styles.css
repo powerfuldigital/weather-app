@@ -18,23 +18,25 @@ border-radius: 5px;}
 #searchLocation:hover {background: whitesmoke;
 color: #999999;}
 
-h1 {font-family: 'Luckiest Guy', cursive;
+#current-weather {text-align: center;}
+
+h1 {
+  font-family: 'Luckiest Guy', cursive;
 margin-bottom: 0px;
 color: #333333;}
 
 
-ul {position:relative;
+ul {
+  position:relative;
   list-style: none;
 margin: -10px;
 padding: 0px;}
 
 li {display: block;}
 
-div {text-align: center;
-  font-family: 'Lato', sans-serif;
-  color: #333333;}
 
-.row {margin-bottom: 5px;}
+.row {margin-bottom: 5px;
+}
 
 .weather-app-wrapper {max-width: 700px;
   margin: 30px auto;}
@@ -63,4 +65,20 @@ text-decoration: none;}
 
 #description {margin-top: 0px;
   text-transform: capitalize;}
+
+#weather-decription {text-align: center;
+  margin-top:30px;}
+
+#weather-forecast {margin-top: 30px;
+text-align:center;}
+
+#weather-forecast-date {font-size: 16px;
+text-align:center;
+opacity: 0.7;}
+
+#forecast-min-temperature {opacity: 0.5}
+
+div {
+  font-family: 'Lato', sans-serif;
+  color: #333333;}
 

@@ -24,6 +24,7 @@
                     <div class="col-3"><input type="submit" value="Search" class="btn btn-primary w-100" id="searchButton"/></div>
                 </div>
             </form>
+            <div id="current-weather">
             <div class="row">
               <div class="col-6">
                 <h1 id="city"></h1>
@@ -40,16 +41,30 @@
                   </div>
                 </div>
             </div>
+          </div>
+            <div id="weather-decription">
             <div class="row">
-              <div class="col-6"><strong>High: </strong><span id="highTemp"></span>º</div>
-              <div class="col-6"><strong>Low: </strong><span id="lowTemp"></span>º</div>
+              <div class="col-3"><strong>High: </strong><span id="highTemp"></span>º</div>
+              <div class="col-3"><strong>Low: </strong><span id="lowTemp"></span>º</div>
+              <div class="col-3"><strong>Wind: </strong><span id="wind"></span>km/h</div>
+              <div class="col-3"><strong>Humidity: </strong><span id="humidity"></span>%</div>
             </div>
-            <div class="row">
-              <div class="col-6"><strong>Wind: </strong><span id="wind"></span>km/h</div>
-              <div class="col-6"><strong>Humidity: </strong><span id="humidity"></span>%</div>
+          </div>
+            <div id="weather-forecast">
+              <div class="row">
+                <div class="col-2">
+                  <div id="weather-forecast-date">Thu</div>
+                  <img src="http://openweathermap.org/img/wn/04d@2x.png" 
+                  alt="cloudy" 
+                  width="36"/>
+                  <div>
+                  <span id="forecast-max-temperature">14º </span>
+                  <span id="forecast-min-temperature">8º</span>
+                </div>
+                  </div>
+              </div>
             </div>
             </div>
-            
         </div>
         <small> <a href="#">Open-source code</a> by Powerful Digital</small>
        
