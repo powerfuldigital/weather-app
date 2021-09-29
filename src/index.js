@@ -10,6 +10,20 @@ function formatDate (timestamp){
 
 }
 
+function displayForecast (){let forecastElement= document.querySelector ("#weather-forecast");
+let forecastHTML= `<div class"row">`;
+forecastHTML= forecastHTML + `<div class="col-2">
+<div id="weather-forecast-date">Thu</div>
+<img src="https://openweathermap.org/img/wn/04d@2x.png" 
+alt="cloudy" 
+width="36"/>
+<div>
+<span id="forecast-max-temperature">14º </span>
+<span id="forecast-min-temperature">8º</span>
+`
+forecastElement.innerHTML= forecastHTML;}
+
+
 function displayTemperature (response){
 let cityElement= document.querySelector ("#city");
 let temperatureELement=document.querySelector ("#temperature");
@@ -70,6 +84,8 @@ celsiusLink.addEventListener ("click", showCelsiusTemperature);
 
 
 search("Canberra");
+
+displayForecast();
 
 
 
